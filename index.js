@@ -8,4 +8,4 @@ app.get("/", (req, res) => {
     res.sendFile(path.resolve("assets", "html", "e.html"));
 });
 
-app.listen(8080);
+app.listen(80);
