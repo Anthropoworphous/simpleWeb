@@ -2,6 +2,9 @@
     font-family: Exo;
     src: url('../font/exo.otf');
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
     font-family: "Exo", sans-serif;
@@ -22,9 +25,23 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
     overscroll-behavior: none;
+    counter-reset: page;
 }
 #pageContainer::-webkit-scrollbar {
     display: none;
+}
+
+#pageNumber {
+    position: fixed;
+    margin: 50px 100px;
+    width: fit-content;
+    bottom: 5px;
+    right: 5px;
+    color: white;
+}
+
+#pageNumber::after {
+
 }
 
 #navBar {
@@ -79,9 +96,11 @@ body {
     flex-flow: column;
     justify-content: center;
     scroll-snap-align: center;
+    scroll-snap-stop: always;
     align-items: center;
     box-shadow: inset 0 0 150px 150px;
     transition: all 1s;
+    counter-increment: page;
 }
 .tab:hover {
     box-shadow: inset 0 0 15px 15px;

@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "e",
   "scripts": {
-    "start": "node index.js"
+    "build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/out.css --watch",
+    "start": "npm build & node index.js"
   },
   "author": "Anthropoworphous",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
   }
 }
