@@ -4,7 +4,7 @@
   "description": "e",
   "scripts": {
     "build": "npx tailwindcss -i ./assets/css/main.css -o ./assets/css/out.css --watch",
-    "start": "npm build & node index.js"
+    "start": "npm run build & node index.js"
   },
   "author": "Anthropoworphous",
   "license": "ISC",
